@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Neko Meow</title>
+    <style>
+        :root {
+            --primary: #ff69b4;
+            --primary-dark: #ff1493;
+            --bg-light: #ffe4e1;
+            --white: #ffffff;
+            --black: #000000;
+            --shadow: rgba(0, 0, 0, 0.2);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--black);
+            padding: 15px 20px;
+            box-shadow: 0 2px 8px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            margin-left: 5px;
+        }
+
+        .logo-link{
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 105, 180, 0.2);
+            color: var(--primary-dark);
+        }
+        
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Profile Styles */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-name {
+            color: var(--black);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .profile-title {
+            color: var(--primary-dark);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .profile-college {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .about-content {
+            margin-top: 20px;
+            background-color: rgba(255, 105, 180, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+        }
+        
+        .about-content h2 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .about-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -2px 8px var(--shadow);
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--primary-dark);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+            
+            .nav-links {
+                gap: 10px;
+            }
+            
+            .profile-image {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12,8L10.67,8.09C9.81,7.07 7.4,4.5 5,4.5C5,4.5 3.03,7.46 4.96,11.41C4.41,12.24 4.07,12.67 4,13.66L2.07,13.95L2.28,14.93L4.04,14.67L4.18,15.38L2.61,16.32L3.08,17.21L4.53,16.32C5.68,18.76 8.59,20 12,20C15.41,20 18.32,18.76 19.47,16.32L20.92,17.21L21.39,16.32L19.82,15.38L19.96,14.67L21.72,14.93L21.93,13.95L20,13.66C19.93,12.67 19.59,12.24 19.04,11.41C20.97,7.46 19,4.5 19,4.5C16.6,4.5 14.19,7.07 13.33,8.09L12,8Z" fill="#ff69b4"/>
+                    <path d="M9,11.75A1.25,1.25 0 0,0 7.75,13A1.25,1.25 0 0,0 9,14.25A1.25,1.25 0 0,0 10.25,13A1.25,1.25 0 0,0 9,11.75M15,11.75A1.25,1.25 0 0,0 13.75,13A1.25,1.25 0 0,0 15,14.25A1.25,1.25 0 0,0 16.25,13A1.25,1.25 0 0,0 15,11.75Z" fill="#ff69b4"/>
+                </svg>
+                <span><a class="logo-link" href="index.html">Neko Meow</a></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>About Me</h1>
+            
+            <div class="profile">
+                <img src="image1.jpeg" alt="Rohan Dutta" class="profile-image">
+                <h2 class="profile-name">Rohan Dutta</h2>
+                <p class="profile-title">BTech, Information Technology</p>
+                <p class="profile-college">RCCIIT, Kolkata, India</p>
+                
+                <div class="about-content">
+                    <h2>Hello There! 👋</h2>
+                    <p>I'm Rohan, a passionate developer with a love for creating cute and functional web applications. Neko Meow is one of my fun projects that combines my interest in anime aesthetics with web development.</p>
+                    <h2>About Neko Meow</h2>
+                    <p>Neko Meow is a simple web application that fetches and displays anime cat girl images. It was created as a fun project to practice API integration and create something enjoyable for anime fans.</p>
+                    
+                    <p>Feel free to connect with me through social media or check out my other projects!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Made with ❤️ by <a href="about.html">Rohan Dutta</a> | © 2025 Neko Meow</p>
+    </footer>
+</body>
+</html>
